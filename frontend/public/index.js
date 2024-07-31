@@ -24,7 +24,11 @@ function getTodos(){
     })
 }
 
-
+function keyCodeCheck(e){
+    if(e.keyCode === 'Enter'){
+        addTodo()
+    }
+} 
 
 function addTodo(e){
 
