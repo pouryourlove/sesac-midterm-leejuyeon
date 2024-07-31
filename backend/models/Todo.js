@@ -26,4 +26,4 @@ function Todo (Sequelize, DataTypes) {
     )
 }
 
-module.exports = Visitor
+module.exports = Todo
