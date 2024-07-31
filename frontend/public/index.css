@@ -1,3 +1,7 @@
 .todo-list li {
     list-style: none; 
 }
+
+.nav img {
+    width: 300px;
+}
