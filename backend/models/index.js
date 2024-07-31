@@ -9,4 +9,16 @@ const sequelize = new Sequelize(
   config
 );
 
-const Todo = require('./Todo')(sequelize, Sequelize)
+db.Sequelize = Sequelize;
+db.Sequelize = sequelize
+
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log("데이터베이스 연결됨.");
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+module.exports = db;
