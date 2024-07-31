@@ -1,5 +1,6 @@
 const todoPlace = document.querySelector('.todo-list')
-console.log(todoPlace)
+const inputBtn = document.querySelector('.inputBtn')
+const input = document.querySelector('#todo-input')
 
 document.addEventListener("DOMContentLoaded", ()=> {
 	getTodos()
@@ -17,3 +18,20 @@ function getTodos(){
         })      
     })
 }
+
+
+
+function addTodo(e){
+
+        e.preventDefault()
+        const inputValue = input.value
+        if(inputValue === '') {
+            return
+        } else {
+            todoPlace.innerHTML += `<li>${input.value}</li>`
+        }
+        
+}
+
+
+inputBtn.addEventListener('click',addTodo)
