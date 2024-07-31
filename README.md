@@ -1,1 +1,1 @@
-# sesac-midterm-juyeonlee
+# sesac-midterm-leejuyeon
