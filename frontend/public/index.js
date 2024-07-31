@@ -24,12 +24,6 @@ function getTodos(){
     })
 }
 
-function keyCodeCheck(e){
-    if(e.keyCode === 'Enter'){
-        addTodo()
-    }
-} 
-
 function addTodo(e){
 
         e.preventDefault()
@@ -42,6 +36,7 @@ function addTodo(e){
             todoPlace.appendChild(button)
             button.innerText = 'x'
             button.classList.add = "deleteBtn"//???
+            input.value = ""
             
         }
         
@@ -59,3 +54,9 @@ function deleteTodo(e){
 inputBtn.addEventListener('click',addTodo)
 
 deleteBtn.addEventListener('click',deleteTodo)
+
+input.addEventListener("keydown",function(e){
+    if(e.keyCode === 13){
+        addTodo()
+    }
+})
